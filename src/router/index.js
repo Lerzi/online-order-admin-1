@@ -93,9 +93,10 @@ export const constantRoutes = [
         component: () => import('@/views/goods/category/detail.vue'),
         meta: {
           hide: true,
-          title: '添加分类'
+          title: '修改分类'
         }
       },
+      // 商品列表
       {
         path: '/goods/list',
         name: 'GoodsList',
@@ -105,7 +106,36 @@ export const constantRoutes = [
           title: '商品列表'
         }
       },
-
+      // 商品规格
+      {
+        path: '/goods/spec',
+        name: 'GoodsSpec',
+        component: () => import('@/views/goods/spec/index.vue'),
+        meta: {
+          hide: false,
+          title: '商品规格'
+        }
+      },
+      // 添加商品规格
+      {
+        path: '/goods/spec/add',
+        name: 'GoodsSpecAdd',
+        component: () => import('@/views/goods/spec/detail.vue'),
+        meta: {
+          hide: true,
+          title: '添加规格'
+        }
+      },
+      // 修改商品规格
+      {
+        path: '/goods/spec/edit/:id',
+        name: 'GoodsSpecEdit',
+        component: () => import('@/views/goods/spec/detail.vue'),
+        meta: {
+          hide: true,
+          title: '修改规格'
+        }
+      },
     ]
   },
   {
